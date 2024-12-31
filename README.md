@@ -5,6 +5,11 @@ This plugin to connect and communicate with Linktop Health Monitor
 
 ## Getting Started
 
+add this to pubspec:
+
+     sm_linktop:
+       git: https://github.com/SmartMindSYSCoder/sm_linktop.git
+
 To start use this api must be declare instance of plugin :
 
       final _smLinktopPlugin = SMLinktop();
