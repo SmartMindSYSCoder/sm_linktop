@@ -38,4 +38,5 @@ When  the device is connected you will be able to measure as you want:
 
 Note: It is important to understand how the device work before using this plugin 
 
+you can see this demo  video https://www.youtube.com/watch?v=CVZkU5JT8ss
 I hope this clear.
