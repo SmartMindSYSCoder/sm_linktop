@@ -117,7 +117,12 @@ private   MethodChannel.Result result;
       case "disconnect":{
         healthMonitor.disconnect(result);
       }
+break;
 
+      case "isConnected":{
+        healthMonitor.isConnected(result);
+      }
+      break;
 
       case "measureTemp":{
         healthMonitor.measureTemp(result);

@@ -93,6 +93,8 @@ public class HealthMonitor implements  ServiceConnection, MonitorDataTransmissio
 
    }
 
+
+
    public void connect(){
 
 
@@ -134,6 +136,21 @@ public class HealthMonitor implements  ServiceConnection, MonitorDataTransmissio
         result.success(true);
         }
 }
+   public void isConnected(MethodChannel.Result result){
+
+        if(mHcService !=null && mHcService.isConnected){
+
+
+        result.success(true);
+        }
+        else{
+            result.success(false);
+
+        }
+}
+
+
+
     public void sendEvent(){
         JSONObject inputObject = new JSONObject();
 

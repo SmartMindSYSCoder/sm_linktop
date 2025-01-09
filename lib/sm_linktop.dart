@@ -28,6 +28,10 @@ class SMLinktop {
     var disconnected=await methodChannel.invokeMethod('disconnect');
     return disconnected ?? true;
   }
+  Future<bool> isConnected() async{
+    var connected=await methodChannel.invokeMethod('isConnected');
+    return connected ?? false;
+  }
 
 
   Future<dynamic> measureTemp() async{
