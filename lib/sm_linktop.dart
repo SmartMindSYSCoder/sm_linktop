@@ -62,7 +62,7 @@ class SMLinktop {
    Stream<dynamic>? _statusStream;
 
    Stream<dynamic> get statusStream {
-     _statusStream ??= _eventChannel.receiveBroadcastStream();
+     _statusStream = _eventChannel.receiveBroadcastStream();
     return _statusStream!;
   }
 
