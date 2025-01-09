@@ -194,9 +194,11 @@ packages:
   sm_linktop:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "16e03f52c72eed7ba354d2606d2e6f8f7660a22a"
+      url: "https://github.com/SmartMindSYSCoder/sm_linktop.git"
+    source: git
     version: "0.0.1"
   source_span:
     dependency: transitive

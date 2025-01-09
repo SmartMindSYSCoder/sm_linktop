@@ -44,6 +44,8 @@ import java.util.UUID;
 
 //import demo.linktop.utils.UToast;
 import io.flutter.plugin.common.EventChannel;
+import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugin.common.MethodChannel.Result;
 import org.json.JSONObject;
 
 /**
@@ -87,7 +89,7 @@ public class HcService extends Service   {
     private EventChannel.EventSink events;
 
     private Activity activity;
-
+  private   MethodChannel.Result result;
 
     @Override
     public void onCreate() {
@@ -156,8 +158,9 @@ public class HcService extends Service   {
         }
     }
 
-    public void quicklyConnect(EventChannel.EventSink events,Activity activity) {
+    public void quicklyConnect(MethodChannel.Result result,EventChannel.EventSink events,Activity activity) {
 
+        this.result=result;
         this.events=events;
         this.activity=activity;
         if (mAdapter != null) {
@@ -225,6 +228,8 @@ public class HcService extends Service   {
                         mBleDevManager.setCmdThread(new CmdSendThread());
                         isConnected = true;
                       //  sendEvent(true,"BLE_CONNECTED_DEVICE");
+
+                        result.success(true);
 
                         try {
 
