@@ -71,7 +71,6 @@ private   MethodChannel.Result result;
             eventChannel.setStreamHandler(healthMonitor);
 
             healthMonitor.init();
-//            healthMonitor.connect(result);
 
           } else {
             android.widget.Toast.makeText(applicationContext, "Please check bluetooth permission", Toast.LENGTH_SHORT).show();
@@ -97,7 +96,7 @@ private   MethodChannel.Result result;
         if(permissionHelper.isBluetoothEnabled()) {
 
           if (permissionHelper.isPermissionsGranted()) {
-            healthMonitor.connect(result);
+            healthMonitor.connect();
 
           } else {
             android.widget.Toast.makeText(applicationContext, "Please check bluetooth permission", Toast.LENGTH_SHORT).show();

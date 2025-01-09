@@ -95,13 +95,13 @@ public class HealthMonitor implements  ServiceConnection, MonitorDataTransmissio
 
 
 
-   public void connect(MethodChannel.Result result){
+   public void connect(){
 
 
 
         if(mHcService !=null) {
             if (mHcService.isConnected) {
-                result.success(true);
+               // result.success(true);
 
 
                 Log.d("connection","already connected");
@@ -116,7 +116,7 @@ public class HealthMonitor implements  ServiceConnection, MonitorDataTransmissio
 
 //               onOpenBLE();
                 } else {
-                    mHcService.quicklyConnect(result,events,activity);
+                    mHcService.quicklyConnect(events,activity);
                 }
             }
         }
@@ -289,7 +289,7 @@ public class HealthMonitor implements  ServiceConnection, MonitorDataTransmissio
         bleDevManager.getDeviceTask().setOnDeviceInfoListener(this);
 
 
-//        connect();
+        connect();
 
 //        MonitorDataTransmissionManager.getInstance().setOnBleConnectListener(this);
 

@@ -158,9 +158,8 @@ public class HcService extends Service   {
         }
     }
 
-    public void quicklyConnect(MethodChannel.Result result,EventChannel.EventSink events,Activity activity) {
+    public void quicklyConnect(EventChannel.EventSink events,Activity activity) {
 
-        this.result=result;
         this.events=events;
         this.activity=activity;
         if (mAdapter != null) {
@@ -229,7 +228,7 @@ public class HcService extends Service   {
                         isConnected = true;
                       //  sendEvent(true,"BLE_CONNECTED_DEVICE");
 
-                        result.success(true);
+//                        result.success(true);
 
                         try {
 
