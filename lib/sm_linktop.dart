@@ -19,7 +19,8 @@ class SMLinktop {
 
 
   Future init() async{
-   return await  methodChannel.invokeMethod('init');
+     methodChannel.invokeMethod('init');
+
   }
   Future connect() async{
   return await   methodChannel.invokeMethod('connect');
