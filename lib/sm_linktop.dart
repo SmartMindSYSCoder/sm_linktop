@@ -22,7 +22,7 @@ class SMLinktop {
      methodChannel.invokeMethod('init');
   }
   Future connect() async{
-     methodChannel.invokeMethod('connect');
+  return   methodChannel.invokeMethod('connect');
   }
   Future<bool> disconnect() async{
     var disconnected=await methodChannel.invokeMethod('disconnect');
